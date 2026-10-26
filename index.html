@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>For Aswitha</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#08060a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;0,600;1,300;1,500&family=Great+Vibes&family=Caveat:wght@500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="cinema">
+
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+  <!-- ============ Countdown (before midnight) ============ -->
+  <section id="countdown" class="screen hidden">
+    <p class="eyebrow">World premiere</p>
+    <h1 class="script name-xl" data-her></h1>
+    <p class="lead">Opens at midnight, on your birthday</p>
+    <div class="clock" id="cd-clock"></div>
+  </section>
+
+  <!-- ============ Ticket (secret code) ============ -->
+  <section id="gate" class="screen hidden">
+    <div class="ticket">
+      <div class="ticket-main">
+        <p class="eyebrow">Admit one</p>
+        <h1 class="script name-l" data-her></h1>
+        <p class="ticket-film">“The Girl in the Blue T-shirt”</p>
+        <div class="ticket-row"><span>Screen</span><b>Just you</b></div>
+        <div class="ticket-row"><span>Seat</span><b>Row 1 · Forever</b></div>
+        <form id="gate-form" autocomplete="off">
+          <input id="gate-input" inputmode="numeric" maxlength="10" placeholder="Code" aria-label="Secret code">
+          <button type="submit" class="btn">Enter</button>
+        </form>
+        <p class="hint" id="gate-hint"></p>
+        <p class="error" id="gate-error" aria-live="polite"></p>
+      </div>
+      <div class="ticket-stub"><span>28 · 10</span></div>
+    </div>
+  </section>
+
+  <!-- ============ Film leader + titles ============ -->
+  <section id="opening" class="screen hidden">
+    <div class="bars top"></div><div class="bars bottom"></div>
+    <div class="leader" id="leader">
+      <div class="leader-ring"><div class="leader-sweep"></div><span id="leader-num">3</span></div>
+    </div>
+    <div class="titles hidden" id="titles">
+      <p class="eyebrow t-in" style="--d:.2s"><span data-me></span> presents</p>
+      <p class="eyebrow t-in" style="--d:1.4s">a true story</p>
+      <h1 class="film-title t-in" style="--d:2.6s">The Girl in the<br><em>Blue T-shirt</em></h1>
+      <p class="starring t-in" style="--d:4s">starring <span class="script" data-her></span></p>
+      <button class="btn t-in" style="--d:5s" id="begin-btn">Begin</button>
+    </div>
+  </section>
+
+  <!-- ============ The movie ============ -->
+  <main id="movie" class="hidden">
+
+    <header class="hero">
+      <p class="eyebrow reveal">Happy Birthday</p>
+      <h1 class="script name-hero reveal" data-her></h1>
+      <p class="hero-date reveal">28 · 10 · 2026</p>
+      <div class="live reveal">
+        <p class="eyebrow">Since the moment I first saw you</p>
+        <div class="clock" id="live-clock"></div>
+      </div>
+      <a class="scroll-cue" href="#chapters">Our story <span>↓</span></a>
+    </header>
+
+    <div id="chapters"></div>
+
+    <!-- Birthday -->
+    <section class="finale-block birthday reveal" id="birthday">
+      <p class="eyebrow">Tonight</p>
+      <h2 class="section-title">Your First Wish</h2>
+      <div class="media" id="bday-media"></div>
+      <p class="note" id="bday-note"></p>
+
+      <div class="cake-area">
+        <div class="cake" id="cake" role="button" tabindex="0" aria-label="Blow out the candle">
+          <div class="glow"></div>
+          <div class="flame" id="flame"></div>
+          <div class="candle"></div>
+          <div class="tier top-tier"><i></i></div>
+          <div class="tier base-tier"><i></i></div>
+          <div class="plate"></div>
+        </div>
+        <p class="hint" id="cake-hint">Close your eyes, make a wish… then tap the candle</p>
+        <button class="btn ghost small" id="mic-btn" type="button">🎤 Or blow into your phone</button>
+      </div>
+      <h2 class="script hbd hidden" id="hbd"></h2>
+    </section>
+
+    <!-- The ending -->
+    <section class="ending" id="ending">
+      <div class="ways reveal">
+        <p class="eyebrow">I love you in</p>
+        <p class="ways-num" id="ways-num">0</p>
+        <p class="eyebrow">ways</p>
+      </div>
+
+      <div class="chat reveal" id="chat">
+        <div class="chat-head">
+          <div class="avatar" data-her-initial></div>
+          <div><b data-her></b><small id="chat-status">online</small></div>
+        </div>
+        <div class="chat-body" id="chat-body">
+          <div class="bubble her typing" id="typing"><i></i><i></i><i></i></div>
+        </div>
+      </div>
+
+      <h2 class="waiting reveal" id="waiting"></h2>
+
+      <form id="reply-form" class="reply reveal" autocomplete="off">
+        <label for="reply-text" class="eyebrow">Write back to <span data-me></span></label>
+        <textarea id="reply-text" name="message" rows="4" required placeholder="Type anything… he'll get it."></textarea>
+        <button class="btn" type="submit" id="send-btn">Send ❤️</button>
+        <p class="hint" id="form-status" aria-live="polite"></p>
+        <a class="btn ghost hidden" id="wa-btn" target="_blank" rel="noopener">Send on WhatsApp instead</a>
+      </form>
+    </section>
+
+    <section class="credits" id="credits">
+      <div class="roll" id="roll"></div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox hidden" id="lightbox" role="dialog" aria-modal="true">
+    <button class="lb-close" id="lb-close" aria-label="Close">×</button>
+    <div class="lb-inner" id="lb-inner"></div>
+  </div>
+
+  <button id="music-btn" class="music hidden" aria-label="Music on/off"><span></span><span></span><span></span></button>
+  <audio id="music" loop preload="auto"></audio>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -33,7 +33,7 @@
       <div class="ticket-main">
         <p class="eyebrow">Admit one</p>
         <h1 class="script name-l" data-her></h1>
-        <p class="ticket-film">“The Girl in the Blue T-shirt”</p>
+        <p class="ticket-film">"The Girl in the Blue T-shirt"</p>
         <div class="ticket-row"><span>Screen</span><b>Just you</b></div>
         <div class="ticket-row"><span>Seat</span><b>Row 1 · Forever</b></div>
         <form id="gate-form" autocomplete="off">
@@ -77,6 +77,18 @@
     </header>
 
     <div id="chapters"></div>
+
+    <!-- ============ Our Gallery ============ -->
+    <section class="gallery-section reveal" id="our-gallery">
+      <div class="gallery-section-header">
+        <p class="eyebrow">Every moment captured</p>
+        <h2>Our <em>Gallery</em></h2>
+        <p>Little frames of a story that keeps writing itself ✨</p>
+      </div>
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Filled by JS from Our Gallery/ folder config -->
+      </div>
+    </section>
 
     <!-- Birthday -->
     <section class="finale-block birthday reveal" id="birthday">
@@ -140,8 +152,10 @@
     <div class="lb-inner" id="lb-inner"></div>
   </div>
 
-  <button id="music-btn" class="music hidden" aria-label="Music on/off"><span></span><span></span><span></span></button>
-  <audio id="music" loop preload="auto"></audio>
+  <button id="music-btn" class="music hidden" type="button" aria-label="Background music" aria-pressed="false">
+    <span class="music-wave"></span><span class="music-wave"></span><span class="music-wave"></span>
+    <span class="music-label">Play music</span>
+  </button>
 
   <script src="config.js"></script>
   <script src="script.js"></script>

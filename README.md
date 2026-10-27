@@ -8,6 +8,8 @@
 5. **10 chapters** of your story with polaroid photos and videos (tap a photo to open it big).
    The **Intermission film reel** sits in the middle.
 6. **Her birthday:** cake with a candle she can tap, or blow into her phone's mic.
+   A gentle original instrumental plays in the background; on phones, tap **Play music**
+   if the browser blocks automatic playback.
 7. **Ending:** "I love you in 1,000,000,000 ways", a chat where your messages end with
    *"I'm still waiting for your reply ❤️"* and she shows as *typing…*, then a box to write back to you.
 8. **End credits:** "to be continued…"
@@ -22,17 +24,18 @@ Put files in `media` with these names (or change names/captions in `config.js`):
 
 | Chapter | Files |
 |---|---|
-| 1 · Blue T-shirt (15‑07‑2024) | `ch1-first-sight.jpg` |
-| 3 · The girl without a name | `ch3-first-photo.jpg` |
-| 4 · ISKCON (08‑10‑2024) | `ch4-iskcon.jpg`, `ch4-iskcon-2.jpg` |
-| 5 · Tea at Asha | `ch5-asha-tea.jpg`, `ch5-video.mp4` |
-| Intermission reel | `reel-01.jpg` … `reel-06.jpg`, `reel-05.mp4` (add as many as you want) |
-| 6 · First goodbye (24‑07‑2025) | `ch7-goodbye.jpg` |
-| 7 · I saw you again (20‑09‑2025) | `ch8-reunion.jpg`, `ch8-video.mp4` |
-| 8 · Longest night (17‑05‑2026) | `ch9-visit.jpg` |
-| 9 · My first wish (28‑06‑2026) | `ch10-my-birthday.jpg`, `ch10-video.mp4` |
-| 10 · Closing the distance | `ch11-us.jpg` |
-| Birthday | `her-birthday.jpg` |
+| 1 · Blue T-shirt (15‑07‑2024) | `ch1-first-sight.jpg.jpg` |
+| 2 · Classes | `ch2-classes.jpg.jpg` |
+| 3 · The girl without a name | `ch3-first-photo.jpg.jpg` |
+| 4 · ISKCON (08‑10‑2024) | `ch4-iskcon.jpg.jpg`, `ch4-iskcon-2.jpg` |
+| 5 · Tea at Asha | `ch5-asha-tea.jpg.jpg`, `ch5-video.mp4.mp4` |
+| Intermission reel | `reel-01.jpg.mp4` … `reel-06.jpg.MOV` |
+| 6 · First goodbye (24‑07‑2025) | `ch7-goodbye.jpg.jpg` |
+| 7 · I saw you again (20‑09‑2025) | `ch8-reunion.jpg.jpg`, `ch8-video.mp4.MOV` |
+| 8 · Longest night (17‑05‑2026) | `ch9-visit.jpg.jpg` |
+| 9 · My first wish (28‑06‑2026) | `ch10-my-birthday.jpg.jpg`, `ch10-cake.jpg.jpg`, `ch10-video.mp4.mp4` |
+| 10 · Closing the distance | `IMG20260724164947.jpg`, `ch11-video.mp4.mp4` |
+| Birthday | `IMG-20260628-WA0108.jpg` |
 | Music (optional) | `our-song.mp3` |
 
 - Missing files show an "Add photo" frame — so fill every slot or remove it from `config.js`.
